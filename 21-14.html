@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vẽ Hình Chữ Nhật Rỗng</title>
+</head>
+<body>
+    <script>
+        // Yêu cầu người dùng nhập chiều ngang và chiều dọc
+        let width = prompt("Nhập chiều ngang của hình chữ nhật:");
+        let height = prompt("Nhập chiều dọc của hình chữ nhật:");
+
+        // Chuyển giá trị nhập vào thành số
+        width = parseInt(width);
+        height = parseInt(height);
+
+        // Vẽ hình chữ nhật rỗng
+        for (let i = 0; i < height; i++) {
+            for (let j = 0; j < width; j++) {
+                // Vẽ ký tự "x" cho các cạnh và dấu cách cho phần rỗng
+                if (i === 0 || i === height - 1 || j === 0 || j === width - 1) {
+                    document.write("x");
+                } else {
+                    document.write(" ");
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

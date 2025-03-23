@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra dấu cách</title>
+</head>
+<body>
+    <script>
+
+        let tongle = 0;
+        let tongchan = 0;
+
+        for ( let i = 1; i <= 5; i++) {
+            let num = Number(prompt(`Nhap so nguyen thu ${i}: `));
+
+            if (isNaN(num)) {
+                alert("So ban nhap khong hop le");
+                continue;
+          
+        }
+        if (num % 2 != 0) {
+            tongle ++;
+        } else {
+            tongchan ++;
+        }
+    }
+    alert("So luong cac so le la: " + tongle);
+    alert("So luong cac so chan la: " + tongchan);
+
+
+
+
+        
+    </script>
+</body>
+</html>

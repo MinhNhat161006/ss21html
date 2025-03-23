@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra dấu cách</title>
+</head>
+<body>
+    <script>
+
+// Mảng các màu cơ bản
+const colors = ["red", "green", "blue", "yellow", "purple", "orange", "pink"];
+
+// Hàm chọn màu ngẫu nhiên từ mảng
+function getRandomColor() {
+    return colors[Math.floor(Math.random() * colors.length)];
+}
+
+// In ra nhiều dòng với màu ngẫu nhiên khác nhau
+for (let i = 0; i < 5; i++) {  // Số dòng bạn muốn in
+    let randomColor = getRandomColor();
+    console.log(`%cDòng số ${i + 1} có màu ngẫu nhiên!`, `color: ${randomColor}`);
+}
+
+
+    </script>
+            
+</body>
+</html>

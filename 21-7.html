@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra dấu cách</title>
+</head>
+<body>
+    <script>
+
+       let tienbandau = Number(prompt("Nhap so tien ban dau: "));
+         let laisuat = Number(prompt("Nhap lai suat: "));
+            let sothang = Number(prompt("Nhap so thang gui: "));
+           
+            let tienlai = 0;
+            let tongtien = tienbandau;
+            for (let i = 1; i <= sothang; i++) {
+                tienlai = tongtien * laisuat / 100;
+                tongtien += tienlai;
+            }
+            alert("Tong so tien nhan duoc sau " + sothang + " thang la: " + tongtien);
+            alert("So tien lai nhan duoc sau " + sothang + " thang la: " + tienlai);
+    </script>
+            
+</body>
+</html>

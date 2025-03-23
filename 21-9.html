@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra dấu cách</title>
+</head>
+<body>
+    <script>
+
+        let num = Number(prompt("Nhap so nguyen : "));
+        if (num < 0) {
+            alert("So ban nhap khong hop le");
+        } else {
+            let can = Math.sqrt(num);
+            for (let i = 2; i <= can; i++) {
+                if (num % i == 0) {
+                    alert("So ban nhap khong phai la so nguyen to");
+                    break;
+                } else {
+                    alert("So ban nhap la so nguyen to");
+                    break;
+                }
+            }
+        }
+
+    </script>
+            
+</body>
+</html>
