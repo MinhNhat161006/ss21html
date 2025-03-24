@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Máy ATM</title>
+</head>
+<body>
+    <script>
+        // Các mệnh giá của tiền trong ATM
+        const denominations = [500000, 200000, 100000, 50000, 20000, 10000, 5000, 2000, 1000];
+
+        // Yêu cầu người dùng nhập số tiền cần rút
+        let amount = prompt("Nhập số tiền cần rút (phải chia hết cho 1000):");
+
+        // Chuyển đổi input sang số nguyên
+        amount = parseInt(amount);
+
+        // Kiểm tra xem số tiền có chia hết cho 1000 không
+        if (amount % 1000 !== 0) {
+            alert("Số tiền phải chia hết cho 1000.");
+        } else {
+            // Lặp qua các mệnh giá để tính số lượng tờ tiền
+            let result = "";
+
+            for (let i = 0; i < denominations.length; i++) {
+                // Số tờ tiền cho mệnh giá hiện tại
+                let count = Math.floor(amount / denominations[i]);
+                
+                if (count > 0) {
+                    // Cộng kết quả cho mệnh giá hiện tại vào output
+                    result += denominations[i] + " - " + count + " tờ\n";
+                }
+
+                // Giảm số tiền đã rút tương ứng với mệnh giá hiện tại
+                amount -= count * denominations[i];
+            }
+
+            // Hiển thị kết quả
+            alert(result);
+        }
+    </script>
+</body>
+</html>
